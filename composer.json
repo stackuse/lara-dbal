@@ -1,0 +1,27 @@
+{
+    "name": "libra/dbal",
+    "type": "library",
+    "description": "Database Abstraction Layer",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "carl",
+            "email": "2009wpeng@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-mongodb": "*",
+        "mongodb/mongodb": "^1.15",
+        "illuminate/database": "^v10.4"
+    },
+    "require-dev": {
+        "laravel/framework": "^v10.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Libra\\Dbal\\": ""
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
