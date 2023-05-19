@@ -4,29 +4,30 @@ namespace Libra\Dbal\Driver;
 
 use Closure;
 use Illuminate\Contracts\Container\BindingResolutionException;
+use Illuminate\Database\Connection;
+use Illuminate\Database\Connectors\ConnectionFactory as BaseConnectionFactory;
 use Illuminate\Database\Connectors\ConnectorInterface;
 use Illuminate\Database\Connectors\MySqlConnector;
 use Illuminate\Database\Connectors\PostgresConnector;
+use InvalidArgumentException;
 use Libra\Dbal\Driver\Mongo\MgConnection;
 use Libra\Dbal\Driver\Mongo\MgConnector;
 use Libra\Dbal\Driver\Mysql\MyConnection;
 use Libra\Dbal\Driver\Pgsql\PgConnection;
-use Illuminate\Database\Connection;
-use Illuminate\Database\Connectors\ConnectionFactory as BaseConnectionFactory;
-use InvalidArgumentException;
+
 class ConnectionFactory extends BaseConnectionFactory
 {
     /**
      * Create a connector instance based on the configuration.
      *
-     * @param  array  $config
+     * @param array $config
      * @return ConnectorInterface
      *
      * @throws InvalidArgumentException|BindingResolutionException
      */
     public function createConnector(array $config)
     {
-        if (! isset($config['driver'])) {
+        if (!isset($config['driver'])) {
             throw new InvalidArgumentException('A driver must be specified.');
         }
 

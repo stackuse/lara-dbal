@@ -2,9 +2,9 @@
 
 namespace Libra\Dbal\Driver\Mysql;
 
+use Illuminate\Database\MySqlConnection;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Libra\Dbal\Driver\Mysql\Schema\MyBuilder;
-use Illuminate\Database\MySqlConnection;
 
 class MyConnection extends MySqlConnection
 {

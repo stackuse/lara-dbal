@@ -3,8 +3,8 @@
 namespace Libra\Dbal\Driver\Pgsql\Schema;
 
 use Closure;
-use Libra\Dbal\Schema\Blueprint;
 use Illuminate\Database\Schema\PostgresBuilder;
+use Libra\Dbal\Schema\Blueprint;
 
 class PgBuilder extends PostgresBuilder
 {

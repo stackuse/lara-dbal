@@ -8,6 +8,7 @@ use Symfony\Component\Uid\Uuid;
 trait HasUuids
 {
     protected bool $useUuId = false;
+
     /**
      * Initialize the trait.
      *

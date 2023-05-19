@@ -45,6 +45,7 @@ trait UuidTrait
     {
         return false;
     }
+
     /**
      * Get the auto-incrementing key type.
      *

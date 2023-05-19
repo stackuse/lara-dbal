@@ -2,6 +2,7 @@
 
 namespace Libra\Dbal\Dao\Concerns;
 
+use Illuminate\Support\Str;
 use Libra\Dbal\Dao\Relations\BelongsTo;
 use Libra\Dbal\Dao\Relations\BelongsToMany;
 use Libra\Dbal\Dao\Relations\EmbedsMany;
@@ -11,7 +12,6 @@ use Libra\Dbal\Dao\Relations\HasOne;
 use Libra\Dbal\Dao\Relations\MorphMany;
 use Libra\Dbal\Dao\Relations\MorphOne;
 use Libra\Dbal\Dao\Relations\MorphTo;
-use Illuminate\Support\Str;
 
 /**
  * 重写 ModelRelations，兼容 mongodb
@@ -130,7 +130,7 @@ trait ModelRelations
         // foreign key name by using the name of the relationship function, which
         // when combined with an "_id" should conventionally match the columns.
         if (is_null($foreignKey)) {
-            $foreignKey = Str::snake($relation).'_id';
+            $foreignKey = Str::snake($relation) . '_id';
         }
 
         // Once we have the foreign key names we'll just create a new Eloquent query

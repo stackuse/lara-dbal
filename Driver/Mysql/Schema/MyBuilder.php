@@ -3,8 +3,8 @@
 namespace Libra\Dbal\Driver\Mysql\Schema;
 
 use Closure;
-use Libra\Dbal\Schema\Blueprint;
 use Illuminate\Database\Schema\MySqlBuilder;
+use Libra\Dbal\Schema\Blueprint;
 
 class MyBuilder extends MySQLBuilder
 {

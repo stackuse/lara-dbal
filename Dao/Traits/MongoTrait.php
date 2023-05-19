@@ -13,6 +13,7 @@ use Symfony\Component\Uid\Uuid;
 trait MongoTrait
 {
     public bool $isMongo = false;
+
     public function initializeMongoTrait(): void
     {
         $this->isMongo = $this->getConnection()->getDriverName() === 'mongo';
@@ -103,7 +104,7 @@ trait MongoTrait
         $attributes = parent::attributesToArray();
 
         if ($this->isMongo) {
-            $attributes = $this->convertObjectId($attributes, );
+            $attributes = $this->convertObjectId($attributes,);
         }
 
         // Convert dot-notation dates.

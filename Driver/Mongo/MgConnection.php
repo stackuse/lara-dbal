@@ -3,12 +3,12 @@
 namespace Libra\Dbal\Driver\Mongo;
 
 use Closure;
+use Illuminate\Database\Connection;
 use Libra\Dbal\Driver\Mongo\Query\MgQueryBuilder;
 use Libra\Dbal\Driver\Mongo\Query\MgQueryGrammar;
 use Libra\Dbal\Driver\Mongo\Query\MgQueryProcessor;
 use Libra\Dbal\Driver\Mongo\Schema\MgBuilder;
 use Libra\Dbal\Driver\Mongo\Schema\MgGrammar;
-use Illuminate\Database\Connection;
 use MongoDB\Client;
 use MongoDB\Database;
 use MongoDB\Driver\Session;

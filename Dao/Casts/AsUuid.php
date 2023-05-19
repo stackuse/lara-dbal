@@ -11,10 +11,12 @@ class AsUuid implements CastsAttributes
     {
         return $model->uuid2slug($value);
     }
+
     public function get($model, string $key, $value, array $attributes)
     {
         return $model->uuid2slug($value);
     }
+
     public function set($model, string $key, $value, array $attributes)
     {
         return $value;

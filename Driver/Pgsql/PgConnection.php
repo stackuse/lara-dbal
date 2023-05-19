@@ -2,10 +2,10 @@
 
 namespace Libra\Dbal\Driver\Pgsql;
 
+use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Libra\Dbal\Driver\Pgsql\Schema\Grammars\PgGrammar;
 use Libra\Dbal\Driver\Pgsql\Schema\PgBuilder;
-use Illuminate\Database\PostgresConnection;
 
 class PgConnection extends PostgresConnection
 {

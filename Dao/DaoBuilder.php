@@ -2,14 +2,14 @@
 
 namespace Libra\Dbal\Dao;
 
+use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Libra\Dbal\Dao\Concerns\QueryRelations;
 use Libra\Dbal\Dao\Relations\BelongsTo;
 use Libra\Dbal\Dao\Relations\HasMany;
 use Libra\Dbal\Dao\Relations\HasOne;
 use Libra\Dbal\Driver\Mongo\Query\MgQueryBuilder;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\Relation;
 use RuntimeException;
 
 class DaoBuilder extends Builder
@@ -125,7 +125,6 @@ class DaoBuilder extends Builder
     {
         return $this->orderBy($this->defaultKeyName(), $direction);
     }
-
 
 
     public function setRole(bool $hasRole)

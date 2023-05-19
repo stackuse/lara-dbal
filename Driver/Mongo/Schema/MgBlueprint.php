@@ -2,9 +2,9 @@
 
 namespace Libra\Dbal\Driver\Mongo\Schema;
 
+use Illuminate\Database\Connection;
 use Libra\Dbal\Driver\Mongo\MgConnection;
 use Libra\Dbal\Schema\Blueprint;
-use Illuminate\Database\Connection;
 use MongoDB\Collection;
 
 class MgBlueprint extends Blueprint
